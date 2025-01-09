@@ -1,0 +1,13 @@
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Règles pour les photos des plats
+    match /images/{imageId} {
+      // Autoriser la lecture des images pour tout utilisateur authentifié
+      allow read: if request.auth != null;
+      
+      // Autoriser l'écriture des images uniquement aux utilisateurs authentifiés (cuisiniers)
+      allow write: if request.auth != null && request.auth.token.role == 'cuisinier';
+    }
+  }
+}

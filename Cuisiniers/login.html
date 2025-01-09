@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Allô j'ai faim - Connexion</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="../geolocation.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allô j'ai faim - Connexion</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Chemin relatif au fichier CSS -->
+    <script src="../geolocation.js" defer></script> <!-- Chemin relatif au fichier JavaScript -->
 </head>
 <body>
-  <h1>Connexion pour les cuisiniers</h1>
-  <form action="/dashboard" method="POST">
-    <label for="email">Email :</label>
-    <input type="email" id="email" name="email" required><br><br>
-    <label for="password">Mot de passe :</label>
-    <input type="password" id="password" name="password" required><br><br>
-    <button type="submit">Se connecter</button>
-  </form>
-  <p><a href="/register">S'inscrire</a></p>
-  <p><a href="/forgot-password">Mot de passe oublié ?</a></p>
+    <h1>Connexion pour les cuisiniers</h1>
+    <form action="/dashboard" method="POST"> <!-- Action vers la page du tableau de bord -->
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Se connecter</button>
+    </form>
+
+    <!-- Modification du lien d'inscription -->
+    <p><a href="register.html">S'inscrire</a></p> <!-- Lien vers la page d'inscription -->
+    <p><a href="/forgot-password">Mot de passe oublié ?</a></p> <!-- Lien vers la page de récupération -->
 </body>
 </html>

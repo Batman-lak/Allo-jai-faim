@@ -1,0 +1,16 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Règles pour les utilisateurs (Cuisiniers et Clients)
+    match /users/{userId} {
+      // Autoriser les lectures et écritures seulement pour l'utilisateur authentifié
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Règles pour les commandes des clients
+    match /orders/{orderId} {
+      // Autoriser la lecture et l'écriture des commandes uniquement par des clients ou des cuisiniers authentifiés
+      allow read, write: if request.auth != null;
+    }
+  }
+}

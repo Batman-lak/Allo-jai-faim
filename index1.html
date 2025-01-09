@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allô j'ai faim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bienvenue sur Allô j'ai faim</h1>
+    <p>Choisissez votre rôle :</p>
+    <button id="client-button">Vous êtes client</button>
+    <button id="cuisinier-button">Vous êtes cuisinier</button>
+    <script>
+        document.getElementById("client-button").addEventListener("click", () => {
+            window.location.href = "Clients/index2.html"; // Chemin relatif pour la page client
+        });
+        document.getElementById("cuisinier-button").addEventListener("click", () => {
+            window.location.href = "Cuisiniers/login.html"; // Chemin relatif pour la page cuisinier
+        });
+    </script>
+</body>
+</html>
