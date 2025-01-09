@@ -1,13 +1,14 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Linking } from "react-native";
+console.log("Bienvenue sur Allo j'ai faim !");
 
 export default function App() {
   const openClientSite = () => {
-    Linking.openURL("https://example-client-site.com"); // Remplace par l'URL de ton site client.
+    Linking.openURL("https://example-client-login.com"); // Remplace par l'URL de ton site client.
   };
 
   const openCuisinierLogin = () => {
-    Linking.openURL("https://example-cuisinier-login.com"); // Remplace par l'URL de la page de login cuisinier.
+    Linking.openURL("https://example-cuisiniers-login.com"); // Remplace par l'URL de la page de login cuisinier.
   };
 
   return (
